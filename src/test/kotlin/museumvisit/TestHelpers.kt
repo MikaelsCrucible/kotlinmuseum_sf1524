@@ -1,11 +1,14 @@
 package museumvisit
 
-/*
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
 import kotlin.test.fail
 
-class MuseumUnderT(val museum: Museum, val entrance: MuseumRoom, val rooms: List<MuseumRoom>)
+class MuseumUnderT(
+    val museum: Museum,
+    val entrance: MuseumRoom,
+    val rooms: List<MuseumRoom>,
+)
 
 fun createSmallMuseumUnderT(): MuseumUnderT {
     val entrance = MuseumRoom("Entrance", 1)
@@ -61,34 +64,39 @@ fun createAquariumMuseumUnderT(): MuseumUnderT {
     return MuseumUnderT(museum, entrance, rooms)
 }
 
-val lotsOfPeople = listOf(
-    "Neha",
-    "Alex",
-    "Yi",
-    "Jianyi",
-    "Felix",
-    "Oscar",
-    "Amelia",
-    "Noah",
-    "Prakesh",
-    "Satnam",
-    "Susan",
-    "Poppy",
-    "Jaya",
-    "Indy",
-    "Lula",
-    "Maximilian",
-    "Minimilian",
-    "Jacub",
-    "Donald",
-    "Liz",
-    "Teresa",
-    "Julia",
-    "Parminda",
-    "Xi",
-)
+val lotsOfPeople =
+    listOf(
+        "Neha",
+        "Alex",
+        "Yi",
+        "Jianyi",
+        "Felix",
+        "Oscar",
+        "Amelia",
+        "Noah",
+        "Prakesh",
+        "Satnam",
+        "Susan",
+        "Poppy",
+        "Jaya",
+        "Indy",
+        "Lula",
+        "Maximilian",
+        "Minimilian",
+        "Jacub",
+        "Donald",
+        "Liz",
+        "Teresa",
+        "Julia",
+        "Parminda",
+        "Xi",
+    )
 
-fun checkImpatientOutput(person: String, output: String, museumUnderTest: MuseumUnderT) {
+fun checkImpatientOutput(
+    person: String,
+    output: String,
+    museumUnderTest: MuseumUnderT,
+) {
     val lines = output.split("\n")
     var index = 0
     while (lines[index] != "$person has entered ${museumUnderTest.museum.name}.") {
@@ -127,7 +135,11 @@ fun checkImpatientOutput(person: String, output: String, museumUnderTest: Museum
     fail("Expected to see $person leaving the museum.")
 }
 
-fun checkPatientOutput(person: String, output: String, museumUnderTest: MuseumUnderT) {
+fun checkPatientOutput(
+    person: String,
+    output: String,
+    museumUnderTest: MuseumUnderT,
+) {
     val lines = output.split("\n")
     var index = 0
     assertEquals("$person has entered ${museumUnderTest.museum.name}.", lines[index])
@@ -154,4 +166,3 @@ fun checkPatientOutput(person: String, output: String, museumUnderTest: MuseumUn
     }
     fail("Expected to see $person leaving the museum.")
 }
-*/

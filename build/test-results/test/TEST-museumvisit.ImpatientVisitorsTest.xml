@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="museumvisit.ImpatientVisitorsTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-02-14T04:01:03" hostname="MIKAELSCRUCIBLE" time="12.035">
+  <properties/>
+  <testcase name="many visitors to aquarium" classname="museumvisit.ImpatientVisitorsTest" time="2.276"/>
+  <testcase name="many visitors to small museum" classname="museumvisit.ImpatientVisitorsTest" time="5.216"/>
+  <testcase name="two visitors to small museum" classname="museumvisit.ImpatientVisitorsTest" time="3.429"/>
+  <testcase name="two visitors to aquarium" classname="museumvisit.ImpatientVisitorsTest" time="1.112"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

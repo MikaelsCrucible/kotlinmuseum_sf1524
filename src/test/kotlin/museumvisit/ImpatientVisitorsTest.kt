@@ -1,28 +1,32 @@
 package museumvisit
 
-/*
 import org.junit.Test
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 import kotlin.test.assertEquals
 
 class ImpatientVisitorsTest {
-
-    private fun testMuseumVisit(museumUnderTest: MuseumUnderT, people: List<String>) {
-        val byteOutputStreams = people.map {
-            ByteArrayOutputStream()
-        }
-        val printStreams = byteOutputStreams.map {
-            PrintStream(it)
-        }
+    private fun testMuseumVisit(
+        museumUnderTest: MuseumUnderT,
+        people: List<String>,
+    ) {
+        val byteOutputStreams =
+            people.map {
+                ByteArrayOutputStream()
+            }
+        val printStreams =
+            byteOutputStreams.map {
+                PrintStream(it)
+            }
         assertEquals(0, museumUnderTest.museum.admitted)
         assertEquals(0, museumUnderTest.museum.outside.occupancy)
         for (room in museumUnderTest.rooms) {
             assertEquals(0, room.occupancy)
         }
-        val visitors = people.mapIndexed { index, person ->
-            Thread(ImpatientVisitor(person, printStreams[index], museumUnderTest.museum))
-        }
+        val visitors =
+            people.mapIndexed { index, person ->
+                Thread(ImpatientVisitor(person, printStreams[index], museumUnderTest.museum))
+            }
         visitors.forEach { it.start() }
         visitors.forEach { it.join() }
         assertEquals(people.size, museumUnderTest.museum.admitted)
@@ -55,4 +59,3 @@ class ImpatientVisitorsTest {
         testMuseumVisit(createAquariumMuseumUnderT(), lotsOfPeople)
     }
 }
-*/
